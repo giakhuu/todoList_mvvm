@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:gravity="center"
+        android:text="Cập nhật công việc" />
+
+    <TextView
+        android:paddingLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiêu đề">
+
+    </TextView>
+    <EditText
+        android:id="@+id/edtUpdateTaskTitle"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:lines="4"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_bg"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSize="24dp" />
+    <TextView
+        android:paddingLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mô tả">
+
+    </TextView>
+    <EditText
+        android:id="@+id/edtUpdateTaskDesc"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="4"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_bg"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSize="24dp" />
+
+    <TextView
+        android:paddingLeft="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời gian">
+
+    </TextView>
+    <EditText
+        android:id="@+id/edtUpdateTaskDate"
+        android:gravity="left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:lines="4"
+        android:textColor="@color/black"
+        android:background="@drawable/edittext_bg"
+        android:textCursorDrawable="@drawable/custom_cursor"
+        android:textSize="24dp"
+        android:focusable="false"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btnNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <Button
+            android:id="@+id/btnYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đồng ý"
+            app:layout_constraintStart_toEndOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</LinearLayout>

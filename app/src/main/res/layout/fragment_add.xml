@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.todo_list.fragment.Add">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="10dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm công việc"
+            android:textSize="32dp"
+            android:gravity="center"
+            />
+        <TextView
+            android:paddingLeft="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thời gian">
+
+        </TextView>
+        <LinearLayout
+            android:id="@+id/timePickerContainer"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:orientation="horizontal"
+            android:minHeight="50dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_access_time_filled_24">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/edtTasksTime"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="24dp"
+                android:textColor="@color/black"></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/datePickerContainer"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:orientation="horizontal"
+            android:minHeight="50dp"
+            android:layout_marginVertical="10dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/baseline_calendar_month_24">
+            </ImageView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/edtTasksDate"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textSize="24dp"
+                android:textColor="@color/black"></TextView>
+        </LinearLayout>
+        <TextView
+            android:paddingLeft="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tiêu đề">
+
+        </TextView>
+        <EditText
+            android:id="@+id/edtTasks"
+            android:gravity="left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            android:lines="4"
+            android:textColor="@color/black"
+            android:background="@drawable/edittext_bg"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSize="24dp" />
+        <TextView
+            android:paddingLeft="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mô tả">
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/edtTasksDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
+            android:ems="10"
+            android:lines="8"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            android:textColor="@color/black"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textSize="24dp" />
+
+
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:text="Thêm" />
+    </LinearLayout>
+
+</FrameLayout>
