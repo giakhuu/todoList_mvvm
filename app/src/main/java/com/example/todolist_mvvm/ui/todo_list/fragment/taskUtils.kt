@@ -44,7 +44,7 @@ class todoUtils(
         val edtUpdateTaskDesc = dialogView.findViewById<EditText>(R.id.edtUpdateTaskDesc)
         val edtUpdateTaskDate = dialogView.findViewById<EditText>(R.id.edtUpdateTaskDate)
         var savedTimeStamp: Long = todoTask.timeStamp
-        val dateFormat = SimpleDateFormat("yy/MM/dd H:m")
+        val dateFormat = SimpleDateFormat("yy/MM/dd HH:mm")
         val date = Date(savedTimeStamp)
         edtUpdateTaskDate.setText(dateFormat.format(date))
         edtUpdateTaskTitle.setText(todoTask.title)
@@ -55,7 +55,7 @@ class todoUtils(
             // Chờ đến khi người dùng chọn xong cả ngày và giờ
             timeHandler.setOnDateTimeChangeListener { timeStamp ->
                 savedTimeStamp = timeStamp
-                val dateFormat = SimpleDateFormat("yy/MM/dd H:m")
+                val dateFormat = SimpleDateFormat("yy/MM/dd HH:mm")
                 val date = Date(timeStamp)
                 edtUpdateTaskDate.setText(dateFormat.format(date))
             }
