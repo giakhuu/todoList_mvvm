@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         android:paddingHorizontal="10dp">
 
@@ -16,89 +16,99 @@
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Thêm công việc"
-            android:textSize="32dp"
+            android:fontFamily="@font/font_chu_thuong"
             android:gravity="center"
-            />
-        <TextView
-            android:paddingLeft="4dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Thời gian">
+            android:text="Thêm công việc"
+            android:layout_marginBottom="12dp"
+            android:textSize="32sp" />
 
-        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:text="Thời gian" />
+
         <LinearLayout
             android:id="@+id/timePickerContainer"
-            android:gravity="left"
+            android:layout_marginBottom="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/edittext_bg"
-            android:textCursorDrawable="@drawable/custom_cursor"
-            android:orientation="horizontal"
+            android:gravity="left"
             android:minHeight="50dp"
-            >
+            android:orientation="horizontal"
+            android:textCursorDrawable="@drawable/custom_cursor">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/baseline_access_time_filled_24">
-            </ImageView>
+                android:src="@drawable/baseline_access_time_filled_24"/>
+
             <TextView
+                android:id="@+id/edtTasksTime"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/edtTasksTime"
-                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
-                android:textSize="24dp"
-                android:textColor="@color/black"></TextView>
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="24dp" />
         </LinearLayout>
+
         <LinearLayout
             android:id="@+id/datePickerContainer"
-            android:gravity="left"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/edittext_bg"
-            android:textCursorDrawable="@drawable/custom_cursor"
-            android:orientation="horizontal"
-            android:minHeight="50dp"
             android:layout_marginVertical="10dp"
-            >
+            android:background="@drawable/edittext_bg"
+            android:gravity="left"
+            android:minHeight="50dp"
+            android:orientation="horizontal"
+            android:textCursorDrawable="@drawable/custom_cursor">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/baseline_calendar_month_24">
-            </ImageView>
+                android:src="@drawable/baseline_calendar_month_24"/>
+
             <TextView
+                android:id="@+id/edtTasksDate"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:id="@+id/edtTasksDate"
-                android:layout_marginLeft="10dp"
                 android:layout_gravity="center"
-                android:textSize="24dp"
-                android:textColor="@color/black"></TextView>
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
         </LinearLayout>
+
         <TextView
-            android:paddingLeft="4dp"
             android:layout_width="match_parent"
+            android:layout_marginBottom="8dp"
             android:layout_height="wrap_content"
+            android:paddingStart="4dp"
             android:text="Tiêu đề">
 
         </TextView>
+
         <EditText
             android:id="@+id/edtTasks"
-            android:gravity="left"
             android:layout_width="match_parent"
+            android:layout_marginBottom="12dp"
             android:layout_height="wrap_content"
+            android:background="@drawable/edittext_bg"
             android:ems="10"
+            android:gravity="left"
             android:inputType="text"
             android:lines="4"
             android:textColor="@color/black"
-            android:background="@drawable/edittext_bg"
             android:textCursorDrawable="@drawable/custom_cursor"
-            android:textSize="24dp" />
+            android:textSize="24sp" />
+
         <TextView
-            android:paddingLeft="4dp"
+            android:layout_marginBottom="8dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
             android:text="Mô tả">
 
         </TextView>
@@ -109,13 +119,12 @@
             android:layout_height="wrap_content"
             android:background="@drawable/edittext_bg"
             android:ems="10"
-            android:lines="8"
             android:gravity="top|start"
             android:inputType="textMultiLine"
+            android:lines="8"
             android:textColor="@color/black"
             android:textCursorDrawable="@drawable/custom_cursor"
-            android:textSize="24dp" />
-
+            android:textSize="24sp" />
 
 
         <Button
@@ -123,6 +132,7 @@
             android:layout_width="wrap_content"
             android:layout_height="64dp"
             android:layout_gravity="center"
+            android:layout_marginTop="24dp"
             android:text="Thêm" />
     </LinearLayout>
 

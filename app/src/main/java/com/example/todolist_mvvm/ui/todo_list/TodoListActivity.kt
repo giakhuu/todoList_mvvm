@@ -11,6 +11,7 @@ import com.example.myapplication.fragment.Incomplete
 import com.example.todolist_mvvm.R
 import com.example.todolist_mvvm.databinding.TodoListBinding
 import com.example.todolist_mvvm.ui.todo_list.fragment.Add
+import com.example.todolist_mvvm.ui.todo_list.fragment.Note
 import com.example.todolist_mvvm.util.channelID
 import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
@@ -44,6 +45,10 @@ class TodoListActivity : AppCompatActivity() {
                 }
                 R.id.add -> {
                     replaceFragment(Add())
+                    return@setOnItemSelectedListener true
+                }
+                R.id.note -> {
+                    replaceFragment(Note())
                     return@setOnItemSelectedListener true
                 }
                 else -> {
